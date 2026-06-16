@@ -121,13 +121,9 @@ Implemented Models:
 
 * Linear Regression
 * Random Forest Regressor
-
-Planned Models:
-
 * XGBoost Regressor
-* Gradient Boosting Regressor
 
-Advanced Models (Optional):
+Advanced Models (Future Work):
 
 * LSTM
 * Prophet
@@ -151,6 +147,7 @@ Performance Metrics:
 * Matplotlib
 * Seaborn
 * Scikit-Learn
+* XGBoost
 * Jupyter Notebook
 * Git & GitHub
 
@@ -163,7 +160,7 @@ Performance Metrics:
 3. Perform Data Cleaning
 4. Extract Time-Based Features
 5. Conduct Exploratory Data Analysis
-6. Train Baseline Models
+6. Train Machine Learning Models
 7. Evaluate Performance
 8. Analyze Feature Importance
 9. Compare Models
@@ -180,7 +177,7 @@ SMART_CITY-TRAFFIC-PATTERNS/
 │
 ├── notebooks/
 │   ├── 01_EDA_Traffic.ipynb
-│   └── 02_Model_Training.ipynb
+│   └── 02_Model_Development.ipynb
 │
 ├── images/
 │   ├── traffic_by_hour.png
@@ -195,6 +192,7 @@ SMART_CITY-TRAFFIC-PATTERNS/
 │   ├── Week-01-Progress.md
 │   ├── Week-02-Progress.md
 │   ├── Week-03-Progress.md
+│   ├── Week-04-Progress.md
 │   └── Final_Report.pdf
 │
 ├── README.md
@@ -218,12 +216,6 @@ SMART_CITY-TRAFFIC-PATTERNS/
 * Explored dataset structure and features.
 * Identified traffic volume as the target variable.
 * Reviewed data collection methodology.
-
-### Environment Setup
-
-* Configured Python environment.
-* Installed required libraries.
-* Created project repository structure.
 
 ---
 
@@ -282,8 +274,6 @@ Performance:
 
 ### Feature Importance Analysis
 
-Feature Importance Ranking:
-
 | Feature  | Importance |
 | -------- | ---------- |
 | Junction | 0.517      |
@@ -298,19 +288,34 @@ Feature Importance Ranking:
 * Compared Linear Regression and Random Forest models.
 * Generated Actual vs Predicted Traffic visualization.
 * Performed feature importance analysis.
-* Identified key traffic forecasting factors.
 
 ---
 
-## Upcoming Work (Week 04)
+## Week 04
 
-* Hyperparameter tuning
-* Model optimization
-* XGBoost implementation
-* Performance improvement
-* Model comparison
-* Final documentation
-* Final report preparation
+### Model Optimization
+
+Implemented XGBoost Regressor and compared performance against previously developed models.
+
+#### XGBoost Regressor
+
+Performance:
+
+* MAE: 2.76
+* RMSE: 4.62
+* R² Score: 0.948
+
+### Final Model Comparison
+
+| Model                   | MAE  | RMSE  | R² Score |
+| ----------------------- | ---- | ----- | -------- |
+| Linear Regression       | 9.75 | 13.00 | 0.585    |
+| Random Forest Regressor | 2.40 | 3.59  | 0.968    |
+| XGBoost Regressor       | 2.76 | 4.62  | 0.948    |
+
+### Final Model Selection
+
+Random Forest Regressor was selected as the final model due to its superior forecasting performance.
 
 ---
 
@@ -325,27 +330,30 @@ Key observations:
 * Weekdays influence traffic behavior.
 * Junction location is a major determinant of traffic volume.
 
+---
+
 ## Model Results
 
-| Model                   | RMSE    | MAE     | R² Score |
-| ----------------------- | ------- | ------- | -------- |
-| Linear Regression       | 13.00   | 9.75    | 0.585    |
-| Random Forest Regressor | 3.59    | 2.40    | 0.968    |
-| XGBoost Regressor       | Planned | Planned | Planned  |
+| Model                   | RMSE  | MAE  | R² Score |
+| ----------------------- | ----- | ---- | -------- |
+| Linear Regression       | 13.00 | 9.75 | 0.585    |
+| Random Forest Regressor | 3.59  | 2.40 | 0.968    |
+| XGBoost Regressor       | 4.62  | 2.76 | 0.948    |
 
 ---
 
 ## Key Findings
 
-* Random Forest significantly outperformed Linear Regression.
-* Junction is the most influential feature for traffic prediction.
-* Hour and Year also contribute strongly to forecasting accuracy.
-* The model successfully captures both temporal and spatial traffic patterns.
-* Traffic volume can be predicted with high accuracy using machine learning techniques.
+* Random Forest achieved the highest predictive accuracy.
+* Junction was identified as the most influential forecasting feature.
+* Hour and Year contributed significantly to traffic prediction.
+* XGBoost produced strong results but did not outperform Random Forest.
+* Traffic volume can be predicted with very high accuracy.
+* The final model explains approximately 96.8% of traffic variation.
 
 ---
 
-## Best Model
+## Final Model
 
 ### Random Forest Regressor
 
@@ -355,31 +363,37 @@ Performance:
 * RMSE: 3.59 vehicles
 * R² Score: 0.968
 
+Reason for Selection:
+
+* Lowest prediction error.
+* Highest R² Score.
+* Strong forecasting capability.
+* Stable performance across evaluations.
+
 ---
 
 # Key Learnings
-
-Through this project, I learned:
 
 * Traffic forecasting concepts
 * Exploratory Data Analysis (EDA)
 * Feature engineering using DateTime variables
 * Linear Regression modeling
 * Random Forest Regression
-* Model evaluation using MAE, RMSE, and R²
+* XGBoost Regression
 * Feature importance analysis
+* Model comparison techniques
 * Smart City analytics
-* Machine Learning workflow for forecasting problems
 
 ---
 
 # Future Improvements
 
-* Hyperparameter tuning.
-* XGBoost implementation.
-* Advanced forecasting models (LSTM, Prophet, ARIMA).
-* Real-time traffic prediction system.
-* Interactive traffic dashboard development.
+* Hyperparameter tuning for additional performance gains.
+* Advanced feature engineering.
+* Deep learning models such as LSTM.
+* Prophet and ARIMA forecasting models.
+* Real-time traffic prediction systems.
+* Interactive traffic management dashboards.
 * Deployment using Streamlit or Flask.
 
 ---
